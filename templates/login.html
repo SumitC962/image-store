@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Secure Image Storage{% endblock %}
+
+{% block content %}
+<div style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+    <div class="card" style="max-width: 400px; width: 100%;">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <i class="fas fa-lock" style="font-size: 3rem; color: #667eea; margin-bottom: 20px;"></i>
+            <h1 style="color: #4a5568; margin-bottom: 10px;">Secure Access</h1>
+            <p style="color: #718096;">Enter your password to access your image storage</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'error' if category == 'error' else 'success' }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('login') }}">
+            <div class="form-group">
+                <label for="password">
+                    <i class="fas fa-key"></i> Password
+                </label>
+                <input type="password" id="password" name="password" class="form-control" required autofocus>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </form>
+
+        <div style="margin-top: 30px; text-align: center; color: #718096; font-size: 14px;">
+            <p><i class="fas fa-shield-alt"></i> Your images are protected with secure encryption</p>
+        </div>
+    </div>
+</div>
+{% endblock %} 
