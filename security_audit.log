@@ -1,0 +1,192 @@
+2025-07-06 17:28:22,007 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\New folder\PDF_MOD\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-06 17:28:22,599 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 17:28:22,600 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 17:29:22,251 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:29:22.251019", "event_type": "WEAK_PASSWORD_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Weak password attempt from 127.0.0.1"}
+2025-07-06 17:29:22,275 - INFO - 127.0.0.1 - - [06/Jul/2025 17:29:22] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:29:29,478 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:29:29.478635", "event_type": "WEAK_PASSWORD_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Weak password attempt from 127.0.0.1"}
+2025-07-06 17:29:29,481 - INFO - 127.0.0.1 - - [06/Jul/2025 17:29:29] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:30:52,155 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:30:52.155406", "event_type": "WEAK_PASSWORD_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Weak password attempt from 127.0.0.1"}
+2025-07-06 17:30:52,157 - INFO - 127.0.0.1 - - [06/Jul/2025 17:30:52] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:31:08,593 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:31:08.593728", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:31:08,595 - INFO - 127.0.0.1 - - [06/Jul/2025 17:31:08] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:32:33,394 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:32:33.393998", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:32:33,396 - INFO - 127.0.0.1 - - [06/Jul/2025 17:32:33] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:34:06,357 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:34:06.357304", "event_type": "ACCOUNT_LOCKOUT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "IP 127.0.0.1 locked out for 900 seconds"}
+2025-07-06 17:34:06,358 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:34:06.358071", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:34:06,359 - INFO - 127.0.0.1 - - [06/Jul/2025 17:34:06] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:34:23,192 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:34:23.191992", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 17:34:23,194 - INFO - 127.0.0.1 - - [06/Jul/2025 17:34:23] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:36:06,943 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\New folder\PDF_MOD\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-07-06 17:36:07,551 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 17:36:07,551 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 17:37:32,976 - INFO - 127.0.0.1 - - [06/Jul/2025 17:37:32] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 17:37:33,054 - INFO - 127.0.0.1 - - [06/Jul/2025 17:37:33] "GET /login HTTP/1.1" 200 -
+2025-07-06 17:37:35,080 - INFO - 127.0.0.1 - - [06/Jul/2025 17:37:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-06 17:37:56,575 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:37:56.575171", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:37:56,577 - INFO - 127.0.0.1 - - [06/Jul/2025 17:37:56] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:40:46,642 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:40:46.642570", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:40:46,645 - INFO - 127.0.0.1 - - [06/Jul/2025 17:40:46] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:44:58,681 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 17:44:58,682 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 17:45:07,672 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:45:07.672559", "event_type": "ACCOUNT_LOCKOUT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "IP 127.0.0.1 locked out for 900 seconds"}
+2025-07-06 17:45:07,673 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:45:07.673228", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:45:07,674 - INFO - 127.0.0.1 - - [06/Jul/2025 17:45:07] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:45:26,369 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:45:26.368749", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.4202", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 17:45:26,372 - INFO - 127.0.0.1 - - [06/Jul/2025 17:45:26] "GET /login HTTP/1.1" 200 -
+2025-07-06 17:45:55,740 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:45:55.740428", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 17:45:55,742 - INFO - 127.0.0.1 - - [06/Jul/2025 17:45:55] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:50:42,601 - INFO - 127.0.0.1 - - [06/Jul/2025 17:50:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 17:50:42,612 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:50:42.612155", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 17:50:42,615 - INFO - 127.0.0.1 - - [06/Jul/2025 17:50:42] "GET /login HTTP/1.1" 200 -
+2025-07-06 17:51:15,425 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:51:15.425368", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 17:51:15,428 - INFO - 127.0.0.1 - - [06/Jul/2025 17:51:15] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:52:57,430 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 17:52:57,431 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 17:53:00,624 - INFO - 127.0.0.1 - - [06/Jul/2025 17:53:00] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 17:53:00,706 - INFO - 127.0.0.1 - - [06/Jul/2025 17:53:00] "GET /login HTTP/1.1" 200 -
+2025-07-06 17:54:25,057 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:54:25.057282", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:54:25,059 - INFO - 127.0.0.1 - - [06/Jul/2025 17:54:25] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:55:20,225 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 17:55:20,226 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 17:55:44,964 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:55:44.963911", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:55:44,965 - INFO - 127.0.0.1 - - [06/Jul/2025 17:55:44] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:56:12,541 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:56:12.541043", "event_type": "ACCOUNT_LOCKOUT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "IP 127.0.0.1 locked out for 900 seconds"}
+2025-07-06 17:56:12,541 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:56:12.541835", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 17:56:12,543 - INFO - 127.0.0.1 - - [06/Jul/2025 17:56:12] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:57:16,059 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 17:57:16,060 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 17:58:01,893 - INFO - 127.0.0.1 - - [06/Jul/2025 17:58:01] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 17:58:01,928 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:58:01.928493", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 17:58:01,931 - INFO - 127.0.0.1 - - [06/Jul/2025 17:58:01] "GET /login HTTP/1.1" 200 -
+2025-07-06 17:58:41,154 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T17:58:41.154031", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 17:58:41,157 - INFO - 127.0.0.1 - - [06/Jul/2025 17:58:41] "POST /login HTTP/1.1" 200 -
+2025-07-06 17:59:02,430 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 17:59:02,431 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 17:59:07,721 - INFO - 127.0.0.1 - - [06/Jul/2025 17:59:07] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 17:59:07,776 - INFO - 127.0.0.1 - - [06/Jul/2025 17:59:07] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:00:01,145 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:00:01.145096", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \"SecureBankPass123!\" (length: 18)"}
+2025-07-06 18:00:01,618 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:00:01.618104", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:00:01,619 - INFO - 127.0.0.1 - - [06/Jul/2025 18:00:01] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:17:19,795 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 18:17:19,796 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 18:17:31,951 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:17:31.950082", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \"SecureBankPass123!\" (length: 18)"}
+2025-07-06 18:17:32,452 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:17:32.452411", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:17:32,472 - INFO - 127.0.0.1 - - [06/Jul/2025 18:17:32] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:17:44,022 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:17:44.021911", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \"SecureBankPass123!\" (length: 18)"}
+2025-07-06 18:17:44,522 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:17:44.521926", "event_type": "ACCOUNT_LOCKOUT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "IP 127.0.0.1 locked out for 900 seconds"}
+2025-07-06 18:17:44,523 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:17:44.523733", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:17:44,525 - INFO - 127.0.0.1 - - [06/Jul/2025 18:17:44] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:18:12,153 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 18:18:12,154 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 18:18:17,255 - INFO - 127.0.0.1 - - [06/Jul/2025 18:18:17] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 18:18:17,290 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:18:17.290567", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 18:18:17,293 - INFO - 127.0.0.1 - - [06/Jul/2025 18:18:17] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:20:54,807 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 18:20:54,807 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 18:21:08,778 - INFO - 127.0.0.1 - - [06/Jul/2025 18:21:08] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 18:21:08,811 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:21:08.810922", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 18:21:08,813 - INFO - 127.0.0.1 - - [06/Jul/2025 18:21:08] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:21:32,820 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 18:21:32,821 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 18:21:38,891 - INFO - 127.0.0.1 - - [06/Jul/2025 18:21:38] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 18:21:38,938 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:21:38.937894", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 18:21:38,941 - INFO - 127.0.0.1 - - [06/Jul/2025 18:21:38] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:22:12,038 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 18:22:12,039 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 18:22:19,783 - INFO - 127.0.0.1 - - [06/Jul/2025 18:22:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 18:22:19,908 - INFO - 127.0.0.1 - - [06/Jul/2025 18:22:19] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:22:41,267 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:22:41.267262", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \" SecureBankPass123!\" (length: 19)"}
+2025-07-06 18:22:41,268 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:22:41.268244", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:22:41,270 - INFO - 127.0.0.1 - - [06/Jul/2025 18:22:41] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:23:04,047 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:23:04.047601", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \" SecureBankPass123!\" (length: 19)"}
+2025-07-06 18:23:04,048 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:23:04.048534", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:23:04,052 - INFO - 127.0.0.1 - - [06/Jul/2025 18:23:04] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:24:19,485 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:24:19.485427", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \"SecureBankPass123!\" (length: 18)"}
+2025-07-06 18:24:19,486 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:24:19.486190", "event_type": "ACCOUNT_LOCKOUT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "IP 127.0.0.1 locked out for 900 seconds"}
+2025-07-06 18:24:19,487 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:24:19.486899", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:24:19,488 - INFO - 127.0.0.1 - - [06/Jul/2025 18:24:19] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:24:28,533 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:24:28.533188", "event_type": "BLOCKED_ACCESS", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Attempted access from locked IP 127.0.0.1"}
+2025-07-06 18:24:28,534 - INFO - 127.0.0.1 - - [06/Jul/2025 18:24:28] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:27:42,541 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 18:27:42,542 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 18:27:50,183 - INFO - 127.0.0.1 - - [06/Jul/2025 18:27:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 18:27:50,253 - INFO - 127.0.0.1 - - [06/Jul/2025 18:27:50] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:27:55,429 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:27:55.429166", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \"admin123\" (length: 8)"}
+2025-07-06 18:27:55,430 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:27:55.430365", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:27:55,432 - INFO - 127.0.0.1 - - [06/Jul/2025 18:27:55] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:30:01,711 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 18:30:01,712 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 18:30:06,337 - INFO - 127.0.0.1 - - [06/Jul/2025 18:30:06] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 18:30:06,397 - INFO - 127.0.0.1 - - [06/Jul/2025 18:30:06] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:30:07,546 - INFO - 127.0.0.1 - - [06/Jul/2025 18:30:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-06 18:30:14,928 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:30:14.928486", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \"admin123\" (length: 8)"}
+2025-07-06 18:30:14,929 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:30:14.929399", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:30:14,932 - INFO - 127.0.0.1 - - [06/Jul/2025 18:30:14] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:31:39,774 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.156.164:5000
+2025-07-06 18:31:39,776 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 18:31:43,980 - INFO - 127.0.0.1 - - [06/Jul/2025 18:31:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 18:31:44,102 - INFO - 127.0.0.1 - - [06/Jul/2025 18:31:44] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:31:44,778 - INFO - 127.0.0.1 - - [06/Jul/2025 18:31:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-06 18:31:51,433 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:31:51.433714", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \"admin123\" (length: 8)"}
+2025-07-06 18:31:51,435 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:31:51.434775", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:31:51,437 - INFO - 127.0.0.1 - - [06/Jul/2025 18:31:51] "POST /login HTTP/1.1" 200 -
+2025-07-06 18:34:49,539 - INFO - 127.0.0.1 - - [06/Jul/2025 18:34:49] "[32mGET / HTTP/1.1[0m" 302 -
+2025-07-06 18:34:49,552 - INFO - 127.0.0.1 - - [06/Jul/2025 18:34:49] "GET /login HTTP/1.1" 200 -
+2025-07-06 18:34:54,751 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:34:54.751164", "event_type": "LOGIN_ATTEMPT", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Password attempt: \"admin123\" (length: 8)"}
+2025-07-06 18:34:54,752 - INFO - SECURITY_EVENT: {"timestamp": "2025-07-06T18:34:54.751897", "event_type": "FAILED_LOGIN", "ip_address": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36", "details": "Failed login attempt from 127.0.0.1"}
+2025-07-06 18:34:54,753 - INFO - 127.0.0.1 - - [06/Jul/2025 18:34:54] "POST /login HTTP/1.1" 200 -
