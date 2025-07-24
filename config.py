@@ -1,28 +1,44 @@
 import os
-from dotenv import load_dotenv
+import secrets
 
-# Load environment variables
-load_dotenv()
+# Environment variables are loaded automatically by Flask
 
 class Config:
-    # Security
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'your-super-secret-key-change-this-in-production'
-    ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD') or 'admin123'
-    
-    # File Upload
-    UPLOAD_FOLDER = os.environ.get('UPLOAD_FOLDER') or 'uploads'
-    MAX_CONTENT_LENGTH = int(os.environ.get('MAX_FILE_SIZE', 16 * 1024 * 1024))  # 16MB default
-    
-    # Allowed file extensions
+    """Base configuration class"""
+    SECRET_KEY = os.environ.get('SECRET_KEY', secrets.token_hex(32))
+    UPLOAD_FOLDER = 'uploads'
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp', 'tiff'}
+    MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB max file size
     
-    # Session Security
+    # Security settings
     SESSION_COOKIE_SECURE = False  # Set to True in production with HTTPS
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'Lax'
+    PERMANENT_SESSION_LIFETIME = 3600  # 1 hour
     
-    # Rate Limiting
-    RATELIMIT_STORAGE_URL = os.environ.get('RATELIMIT_STORAGE_URL', 'memory://')
+    # Admin password
+    ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'admin123')
+
+class DevelopmentConfig(Config):
+    """Development configuration"""
+    DEBUG = True
+    SESSION_COOKIE_SECURE = False  # Allow HTTP in development
+
+class ProductionConfig(Config):
+    """Production configuration"""
+    DEBUG = False
+    SESSION_COOKIE_SECURE = True  # Require HTTPS in production
     
-    # Development/Production
-    DEBUG = os.environ.get('FLASK_DEBUG', 'True').lower() == 'true' 
+    # Additional production security
+    SESSION_COOKIE_SAMESITE = 'Strict'
+    PERMANENT_SESSION_LIFETIME = 1800  # 30 minutes in production
+
+# Configuration mapping
+config = {
+    'development': DevelopmentConfig,
+    'production': ProductionConfig,
+    'default': DevelopmentConfig
+}
+
+# Rate Limiting
+RATELIMIT_STORAGE_URL = os.environ.get('RATELIMIT_STORAGE_URL', 'memory://') 

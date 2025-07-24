@@ -106,6 +106,9 @@ A password-protected web application for securely storing and organizing your im
 - **Session Security**: HTTP-only cookies with secure flags
 - **Maximum file size limits**: 16MB (configurable)
 - **Content Validation**: Ensures uploaded files are actual images
+- **Security Headers**: XSS protection, clickjacking prevention, HSTS
+- **Input Validation**: Sanitized folder names and file paths
+- **Image Previews**: Secure thumbnail generation with fallback icons
 
 ## Customization
 
@@ -176,6 +179,8 @@ PDF_MOD/
 - **Monitor logs** for suspicious activity
 - **Use Docker** for isolated deployment
 - **Set up rate limiting** to prevent brute force attacks
+- **Run security tests** using `python security_test.py`
+- **Review SECURITY.md** for detailed security documentation
 
 ## Troubleshooting
 

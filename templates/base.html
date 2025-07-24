@@ -99,6 +99,15 @@
             background: #38a169;
         }
 
+        .btn-info {
+            background: #4299e1;
+            color: white;
+        }
+
+        .btn-info:hover {
+            background: #3182ce;
+        }
+
         .card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -201,18 +210,52 @@
 
         .file-item {
             display: flex;
+            align-items: center;
+            padding: 12px;
+            background: #f7fafc;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            gap: 15px;
+        }
+
+        .file-preview {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .image-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .file-icon {
+            font-size: 2rem;
+            color: #a0aec0;
+        }
+
+        .file-info {
+            flex: 1;
+            display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 12px;
-            background: #f7fafc;
-            border-radius: 6px;
-            margin-bottom: 8px;
         }
 
         .file-name {
             font-size: 14px;
             color: #4a5568;
-            flex: 1;
+            font-weight: 500;
+            word-break: break-word;
+            max-width: 200px;
         }
 
         .file-actions {

@@ -6,62 +6,33 @@ from datetime import datetime
 import zipfile
 from io import BytesIO
 import mimetypes
-import hashlib
+from dotenv import load_dotenv
+load_dotenv()
 
 # Try to import optional dependencies
-try:
-    from flask_limiter import Limiter
-    from flask_limiter.util import get_remote_address
-    FLASK_LIMITER_AVAILABLE = True
-except ImportError:
-    FLASK_LIMITER_AVAILABLE = False
-
 try:
     from PIL import Image
     PIL_AVAILABLE = True
 except ImportError:
     PIL_AVAILABLE = False
 
-try:
-    from passlib.hash import bcrypt
-    BCRYPT_AVAILABLE = True
-except ImportError:
-    BCRYPT_AVAILABLE = False
-
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-change-this-in-production'
+
+# Simple Configuration
+app.config['SECRET_KEY'] = 'your-secret-key-here'
+app.config['PERMANENT_SESSION_LIFETIME'] = 1800  # 30 minutes
 
 # Configuration
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp', 'tiff'}
 MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB max file size
 
-# Initialize rate limiter if available
-if FLASK_LIMITER_AVAILABLE:
-    limiter = Limiter(
-        app=app,
-        key_func=get_remote_address,
-        default_limits=["200 per day", "50 per hour"]
-    )
-else:
-    # Create a dummy limiter decorator
-    class DummyLimiter:
-        def limit(self, limit_string):
-            def decorator(f):
-                return f
-            return decorator
-    limiter = DummyLimiter()
-
 # Create uploads directory if it doesn't exist
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
-# Password hash
-if BCRYPT_AVAILABLE:
-    ADMIN_PASSWORD_HASH = bcrypt.hash('admin123')
-else:
-    # Fallback to SHA256 if bcrypt is not available
-    ADMIN_PASSWORD_HASH = hashlib.sha256('admin123'.encode()).hexdigest()
+# Simple password
+ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'changeme')
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -105,29 +76,21 @@ def index():
     return render_template('index.html', folders=folders)
 
 @app.route('/login', methods=['GET', 'POST'])
-@limiter.limit("5 per minute")
 def login():
     if request.method == 'POST':
-        password = request.form['password']
-        if BCRYPT_AVAILABLE:
-            if bcrypt.verify(password, ADMIN_PASSWORD_HASH):
-                session['authenticated'] = True
-                return redirect(url_for('index'))
-            else:
-                flash('Invalid password!', 'error')
+        password = request.form.get('password', '')
+        
+        if password == ADMIN_PASSWORD:
+            session['authenticated'] = True
+            return redirect(url_for('index'))
         else:
-            # Fallback to SHA256 verification
-            if hashlib.sha256(password.encode()).hexdigest() == ADMIN_PASSWORD_HASH:
-                session['authenticated'] = True
-                return redirect(url_for('index'))
-            else:
-                flash('Invalid password!', 'error')
+            flash('Invalid password!', 'error')
     
     return render_template('login.html')
 
 @app.route('/logout')
 def logout():
-    session.pop('authenticated', None)
+    session.clear()
     return redirect(url_for('login'))
 
 @app.route('/create_folder', methods=['POST'])
@@ -135,14 +98,18 @@ def create_folder():
     if 'authenticated' not in session:
         return redirect(url_for('login'))
     
-    folder_name = request.form['folder_name'].strip()
-    if folder_name:
-        folder_path = get_folder_path(folder_name)
-        if not os.path.exists(folder_path):
-            os.makedirs(folder_path)
-            flash(f'Folder "{folder_name}" created successfully!', 'success')
-        else:
-            flash(f'Folder "{folder_name}" already exists!', 'error')
+    folder_name = request.form.get('folder_name', '').strip()
+    
+    if not folder_name:
+        flash('Folder name cannot be empty!', 'error')
+        return redirect(url_for('index'))
+    
+    folder_path = get_folder_path(folder_name)
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+        flash(f'Folder "{folder_name}" created successfully!', 'success')
+    else:
+        flash(f'Folder "{folder_name}" already exists!', 'error')
     
     return redirect(url_for('index'))
 
@@ -151,7 +118,7 @@ def upload_file():
     if 'authenticated' not in session:
         return redirect(url_for('login'))
     
-    folder_name = request.form['folder']
+    folder_name = request.form.get('folder', '')
     if 'file' not in request.files:
         flash('No file selected!', 'error')
         return redirect(url_for('index'))
@@ -165,11 +132,6 @@ def upload_file():
         folder_path = get_folder_path(folder_name)
         if os.path.exists(folder_path):
             filename = secure_filename(file.filename or '')
-            # Add timestamp to avoid filename conflicts
-            name, ext = os.path.splitext(filename)
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            filename = f"{name}_{timestamp}{ext}"
-            
             file_path = os.path.join(folder_path, filename)
             file.save(file_path)
             
@@ -211,7 +173,7 @@ def download_file(folder_name, filename):
     file_path = os.path.join(folder_path, filename)
     
     if os.path.exists(file_path) and os.path.isfile(file_path):
-        return send_file(file_path, as_attachment=True)
+        return send_file(file_path, as_attachment=True, download_name=filename)
     else:
         flash('File not found!', 'error')
         return redirect(url_for('index'))
@@ -275,5 +237,18 @@ def download_folder(folder_name):
         flash('Folder not found!', 'error')
         return redirect(url_for('index'))
 
+@app.route('/preview/<folder_name>/<filename>')
+def preview_image(folder_name, filename):
+    if 'authenticated' not in session:
+        return redirect(url_for('login'))
+    
+    folder_path = get_folder_path(folder_name)
+    file_path = os.path.join(folder_path, filename)
+    
+    if os.path.exists(file_path) and os.path.isfile(file_path):
+        return send_file(file_path, mimetype='image/jpeg')
+    else:
+        return "Image not found", 404
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000) 
+    app.run(debug=False, host='0.0.0.0', port=5000) 
